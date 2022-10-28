@@ -8,29 +8,201 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<title>SCANDI</title>
 </head>
 
 <body>
-
-	<header>
-
-		<!-- Меню -->
-		<nav></nav>
-
-		<div>
-			<h1></h1>
-			<p></p>
-			<div><a href=""></a></div>
+	<header class="header-page">
+		<div class="logo">
+			<img src="/img/logo.png" alt="Логотип компании">
+			<img src="/img/logo-name.png" alt="Наименоваие компании">
 		</div>
-
-
-
+		<nav>
+			<div class="nav-item"><a href="#about">О компании</a></div>
+			<div class="nav-item"><a href="#projects">Портфолио</a></div>
+			<div class="nav-item"><a href="#team">Команда</a></div>
+			<div class="nav-item"><a href="#work">Как мы работаем</a></div>
+			<div class="nav-item"><a href="#reviews">Отзывы клиентов</a></div>
+			<div class="nav-item"><a href="#form">Оставить заявку</a></div>
+		</nav>
+		<a href="tel:+79818574624" class="phone">+7 (981) 857-46-24</a>
 	</header>
 
-	<main></main>
+	<main>
 
-	<footer></footer>
+		<!-- Раздел промо -->
+
+		<section class="promo">
+			<div class="promo-text">
+				<h1>Поможем сделать<br>
+					вашу квартиру<br>
+					уютнее</h1>
+				<p>Подбираем текстиль, мебель и аксессуары<br>под ваш интерьер, находим магазины<br>и
+					помогаем организовать доставку </p>
+				<div class="button"><a href="#form">Оставить заявку</a></div>
+			</div>
+		</section>
+
+		<!-- Раздел о компании -->
+
+		<section class="company" id="about">
+			<h2>О нас</h2>
+			<div class="container">
+				<img src="/img/about.jpg" alt="Сервированный стол с вазой">
+				<div class="company-text">
+					<p>Премиальный европейский текстиль — одно из самых главных направлений работы коллектива. Создавать
+						неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим деталям — вот то,
+						что по-настоящему вдохновляет дизайнеров нашей студии.</p>
+					<p>Наш коллектив сделает все, чтобы после сотрудничества с нами, Вам было приятно сказать:
+						« Да! Это именно то, что действительно достойно моего дома!»</p>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Раздел о преимуществах -->
+		<section class="advantages">
+			<ul>
+				<li class="advantages-items"><span>5</span> лет</li>
+				<li class="advantages-items"><span>100</span> проектов</li>
+				<li class="advantages-items"><span>10</span> наград</li>
+			</ul>
+		</section>
+
+
+		<!-- Раздел наши работы -->
+		<section class="projects" id="projects">
+			<h2>Наши работы</h2>
+			<div class="container">
+				<div class="project-items project-text">
+					<h3>Квартира-студия
+						30 кв.м.</h3>
+					<p>В квартире были светлые стены и тёплые цвета. Мы сконцентрировались
+						на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</p>
+				</div>
+				<div class="project-items">
+					<img src="/img/kitchen-2.jpg" class alt="Фото - наш дизайн кухни">
+				</div>
+				<div class="project-items">
+					<img src="/img/sofa.jpg" alt="Фото- наш дизайн гостинной с диваном">
+				</div>
+				<div class="project-items">
+					<img src="/img/bathroom.jpg" alt="Фото - наш дизайн ванной комнаты">
+				</div>
+			</div>
+			<div class="brown-arrow">
+
+				<a href="#">Смотреть ещё<img src="/img/arrow_brown.svg" alt="Стрелка - все наши проекты"></a>
+
+			</div>
+		</section>
+
+		<!-- Раздел команда -->
+
+		<section class="teams" id="teams">
+			<h2>Команда</h2>
+			<div class="container">
+				<figure>
+					<img src="/img/team-masha.jpg" alt="Фото главного дизайнера Маши">
+					<figcaption>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам домой,
+						общается
+						и помогает сделать вашу квартиру красивой и уютной.</figcaption>
+				</figure>
+
+				<figure>
+					<img src="/img/team-sasha.jpg" alt="Фото менеджера Саши">
+					<figcaption>С нашим менеджером Сашей вы познакомитесь в первую очередь. Она проконсультирует вас,
+						соберёт все документы
+						и ответит на все вопросы.</figcaption>
+				</figure>
+
+				<figure>
+					<img src="/img/team-kate.jpg" alt="Фото дизайнера Кати">
+					<figcaption>Катя тоже занимается дизайном.
+						Она всегда находит общий язык
+						с клиентами и точно знает,
+						как обустроить дом так, чтобы вам понравилось.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<!-- Раздел как мы работаем -->
+
+		<section class="work" id="work">
+			<h2>Как мы работаем</h2>
+			<ul>
+				<li>
+					<span>1</span>
+					<p>Знакомимся, выезжаем
+						на объект, утверждаем концепцию, подписываем договор.</p>
+				</li>
+				<li>
+					<span>2</span>
+					<p>Подбираем мебель, текстиль, аксессуары. Делаем 3D-
+						визуализацию.</p>
+				</li>
+				<li>
+					<span>3</span>
+					<p>Находим нужные магазины, помогаем с доставкой
+						и оплатой товаров.</p>
+				</li>
+				<li>
+					<span>4</span>
+					<p>Воплощаем проект в жизнь:
+						расставляем мебель и цветы, вешаем шторы, находим места для мелочей</p>
+				</li>
+			</ul>
+		</section>
+
+		<!-- Раздел Отзывы -->
+
+		<section class="reviews" id="reviews">
+			<h2>Отзывы</h2>
+			<div class="container">
+				<div class="arrow-botton">
+					<a href="#">
+						<img src="/img/arrow_white-toleft.svg" alt="Стрелка на предыдущий отзыв">
+					</a>
+				</div>
+				<blockquote>
+					<p>«Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего
+						дома.</p>
+					<p>Работа шла быстро, было очень приятно общаться и взаимодествовать
+						с сотрудниками. Не ожидала, что это будет так легко!</p>
+					<p>Буду советовать и своим друзьям к вам обращаться!»</p>
+					<cite>АННА БЕЛОВСКАЯ</cite>
+				</blockquote>
+				<div class="review-foto">
+					<img src="/img/armchair.jpg"
+						alt="Фото дизайна гостинной комнаты с креслом и черным кожаным диваном">
+					<img src="/img/kitchen.jpg" alt="Фото дизайна кухни с коричневыми барными стульями">
+				</div>
+				<div class="arrow-botton">
+					<a href="#">
+						<img src="/img/arrow_white-toright.svg" alt="Стрелка на следующий отзыв">
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Раздел оставить заявку -->
+
+		<section class="form" id="form">
+			<div class="container">
+				<h3>Оставить заявку</h3>
+
+			</div>
+			<div class="map">
+				<img src="" alt="Карта с адресом нашей компании">
+			</div>
+		</section>
+
+	</main>
+
+	<footer>1</footer>
 
 </body>
 
