@@ -2,38 +2,16 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #533738;
+	background-color: #E5E5E5;
 	font-family: 'Montserrat';
 }
 
-p {
+p,
+h2,
+h3 {
 	padding: 0;
 	margin: 0;
 }
-
-
-/* Оформление ссылок в nav */
-
-a {
-	text-decoration: none;
-	color: #533738;
-}
-
-.nav-item a:hover,
-.phone:hover {
-	text-decoration: underline;
-	color: #533738;
-}
-
-h2 {
-	text-align: center;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 50px;
-	text-transform: uppercase;
-}
-
 
 /* Стили header */
 .logo {
@@ -53,6 +31,10 @@ nav {
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+nav {
+	flex-wrap: wrap;
+}
+
 .nav-item {
 	margin-right: 25px;
 	font-style: normal;
@@ -63,6 +45,17 @@ nav {
 
 .nav-item:last-child {
 	margin-right: 0;
+}
+
+.nav-item a:hover,
+.phone:hover {
+	text-decoration: underline;
+	color: #533738;
+}
+
+a {
+	text-decoration: none;
+	color: #533738;
 }
 
 /* Раздел промо */
@@ -92,7 +85,7 @@ h1 {
 	line-height: 30px;
 }
 
-.promo-text .button {
+.button {
 	display: block;
 	text-align: center;
 	padding: 25px 65px;
@@ -116,6 +109,20 @@ h1 {
 }
 
 /* Раздел О компании */
+.company {
+	margin-bottom: 20px;
+}
+
+
+h2 {
+	margin-bottom: 40px;
+	text-align: center;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 50px;
+	text-transform: uppercase;
+}
 
 .company .container {
 	display: flex;
@@ -123,15 +130,13 @@ h1 {
 }
 
 .company img {
-	width: 380px;
-	height: 340px;
+	width: 36%;
 	margin-right: 5%;
 	margin-top: 5px;
 }
 
 .company-text {
-	width: 49%;
-	font-family: 'Montserrat';
+	width: 47%;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
@@ -151,27 +156,26 @@ h1 {
 
 .advantages {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
-	height: 273px;
-	left: 0px;
-	top: 1356px;
-	margin-top: 20px;
+	height: 270px;
+	margin-bottom: 65px;
 	background: #8D7370;
 }
 
-.advantages ul {
+.advantages .container {
 	display: flex;
-	padding: 0;
-	margin: 0;
-	list-style: none;
+	justify-content: center;
+	width: 100%;
 }
 
-.advantages-items {
-	margin-right: 20%;
+.advantages-item {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
-	font-family: 'Montserrat';
+	margin-right: 17%;
+	list-style: none;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 30px;
@@ -180,33 +184,69 @@ h1 {
 	color: #FFFFFF;
 }
 
-.advantages-items:last-child {
+.advantages-item:last-child {
 	margin-right: 0;
 }
 
-.advantages-items span {
-	font-family: 'Montserrat';
-	font-style: normal;
+.advantages-item span {
 	font-weight: 400;
 	font-size: 50px;
 	line-height: 62px;
 }
 
 /* Раздел наши работы */
+.projects {
+	display: flex;
+	flex-direction: column;
+	width: 82%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
 
 .projects h2 {
-	text-align: left;
-	margin-left: 7%;
+	align-self: flex-start;
 }
 
 .projects .container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
-	margin-left: 7%;
+	gap: 20px;
+	justify-content: center;
+}
+
+.project-item {
+	position: relative;
+	height: 370px;
+	width: 570px;
+}
+
+.project-item::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(100, 72, 69, 0.8);
+	opacity: 0;
+	transition: opacity 0.3s;
+	will-change: opacity;
+}
+
+.project-item:first-child,
+.project-item:last-child {
+	width: 450px;
+}
+
+.project-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .project-text {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -214,8 +254,14 @@ h1 {
 	margin-right: 20px;
 	margin-bottom: 20px;
 	width: 450px;
-	background: url(/img/bedroom.jpg) rgba(100, 72, 69, 0.8);
-	background-size: cover;
+	opacity: 0;
+	transition: opacity 0.3s;
+	will-change: opacity;
+}
+
+.project-item:hover::before,
+.project-item:hover .project-text {
+	opacity: 1;
 }
 
 .project-text h3 {
@@ -243,26 +289,6 @@ h1 {
 	color: #FFFFFF;
 }
 
-/* img выпадает из контейнеров, пришлось обрезать картинки по высоте!!! */
-.project-items {
-	height: 370px;
-	width: 570px;
-	overflow: hidden;
-}
-
-.project-items:first-child,
-.project-items:last-child {
-	width: 450px;
-}
-
-.project-items img {
-	max-width: 100%;
-	height: auto;
-}
-
-.project-items:nth-child(3) {
-	margin-right: 20px;
-}
 
 .brown-arrow {
 	display: flex;
@@ -272,13 +298,18 @@ h1 {
 	margin-bottom: 40px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 20%;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 37px;
+	color: #533738;
 }
 
 .brown-arrow img {
 	position: absolute;
-	top: 2px;
-	margin-left: 10px;
+	top: 50%;
+	left: 105%;
+	transform: translate(0, -50%);
 }
 
 /* Раздел Команда */
@@ -289,7 +320,7 @@ h1 {
 }
 
 .teams h2 {
-	margin-top: 20px;
+	margin-top: 50px;
 	margin-bottom: 40px;
 }
 
@@ -328,13 +359,15 @@ h1 {
 	padding-bottom: 50px;
 }
 
-h2 {
+.work h2 {
 	margin-top: 30px;
 }
 
-.work ul {
+.work-list {
 	display: flex;
-	list-style: none;
+	width: 85%;
+	margin: 0 auto;
+	padding-top: 40px;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
@@ -343,14 +376,21 @@ h2 {
 	text-align: center;
 }
 
+.work-list-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-/* Не получилось сделать круг для span!!! */
-.work span {
+.work-number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 70px;
 	height: 70px;
+	margin-bottom: 20px;
 	border-radius: 50%;
 	background-color: #8D7370;
-	margin-bottom: 20px;
 
 	font-family: 'Montserrat';
 	font-style: normal;
@@ -361,6 +401,9 @@ h2 {
 }
 
 /* Раздел Отзывы */
+.reviews {
+	padding-bottom: 65px;
+}
 
 .reviews .container {
 	display: flex;
@@ -419,4 +462,111 @@ h2 {
 .review-foto img {
 	max-width: 100%;
 	height: auto;
+}
+
+/* Раздел Оставить заявку */
+
+.form {
+	display: flex;
+	justify-content: center;
+	row-gap: 2%;
+	background-color: #8D7370;
+}
+
+.form-section {
+	width: 45%;
+	margin-top: 50px;
+}
+
+.form h3 {
+	margin-bottom: 25px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 50px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.form p {
+	width: 80%;
+	margin-bottom: 40px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 30px;
+	color: #FFFFFF;
+	opacity: 0.6;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form input {
+	width: 95%;
+	height: 35px;
+	margin-bottom: 35px;
+	background-color: #8D7370;
+	border: none;
+	border-bottom: 1px solid #FFFFFF;
+	transform: rotate(0.11deg);
+
+
+}
+
+.form input,
+.form input::placeholder {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #F6EDE9;
+}
+
+.form-button {
+	width: 310px;
+	height: 75px;
+	background: #CC8B86;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	color: #533738;
+}
+
+
+
+.map {
+	width: 40%;
+	height: auto;
+}
+
+.map img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Раздел footer */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 85%;
+	height: 105px;
+	margin: 0 auto;
+}
+
+footer div:nth-child(1) {
+	flex-grow: 1;
+}
+
+footer div:nth-child(2) {
+	flex-grow: 6;
 }

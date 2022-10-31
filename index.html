@@ -65,11 +65,11 @@
 
 		<!-- Раздел о преимуществах -->
 		<section class="advantages">
-			<ul>
-				<li class="advantages-items"><span>5</span> лет</li>
-				<li class="advantages-items"><span>100</span> проектов</li>
-				<li class="advantages-items"><span>10</span> наград</li>
-			</ul>
+			<div class="container">
+				<div class="advantages-item"><span>5</span>лет опыта</div>
+				<div class="advantages-item"><span>100</span>проектов</div>
+				<div class="advantages-item"><span>10</span>наград</div>
+			</div>
 		</section>
 
 
@@ -77,26 +77,28 @@
 		<section class="projects" id="projects">
 			<h2>Наши работы</h2>
 			<div class="container">
-				<div class="project-items project-text">
-					<h3>Квартира-студия
-						30 кв.м.</h3>
-					<p>В квартире были светлые стены и тёплые цвета. Мы сконцентрировались
-						на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</p>
+				<div class="project-item">
+					<img src="/img/bedroom.jpg" alt="">
+					<div class="project-text">
+						<h3>Квартира-студия
+							30 кв.м.</h3>
+						<p>В квартире были светлые стены и тёплые цвета. Мы сконцентрировались
+							на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.
+						</p>
+					</div>
 				</div>
-				<div class="project-items">
+				<div class="project-item">
 					<img src="/img/kitchen-2.jpg" class alt="Фото - наш дизайн кухни">
 				</div>
-				<div class="project-items">
+				<div class="project-item">
 					<img src="/img/sofa.jpg" alt="Фото- наш дизайн гостинной с диваном">
 				</div>
-				<div class="project-items">
+				<div class="project-item">
 					<img src="/img/bathroom.jpg" alt="Фото - наш дизайн ванной комнаты">
 				</div>
 			</div>
 			<div class="brown-arrow">
-
 				<a href="#">Смотреть ещё<img src="/img/arrow_brown.svg" alt="Стрелка - все наши проекты"></a>
-
 			</div>
 		</section>
 
@@ -133,28 +135,28 @@
 
 		<section class="work" id="work">
 			<h2>Как мы работаем</h2>
-			<ul>
-				<li>
-					<span>1</span>
+			<div class="work-list">
+				<div class="work-list-item">
+					<div class="work-number">1</div>
 					<p>Знакомимся, выезжаем
 						на объект, утверждаем концепцию, подписываем договор.</p>
-				</li>
-				<li>
-					<span>2</span>
+				</div>
+				<div class="work-list-item">
+					<div class="work-number">2</div>
 					<p>Подбираем мебель, текстиль, аксессуары. Делаем 3D-
 						визуализацию.</p>
-				</li>
-				<li>
-					<span>3</span>
+				</div>
+				<div class="work-list-item">
+					<div class="work-number">3</div>
 					<p>Находим нужные магазины, помогаем с доставкой
 						и оплатой товаров.</p>
-				</li>
-				<li>
-					<span>4</span>
+				</div>
+				<div class="work-list-item">
+					<div class="work-number">4</div>
 					<p>Воплощаем проект в жизнь:
 						расставляем мебель и цветы, вешаем шторы, находим места для мелочей</p>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</section>
 
 		<!-- Раздел Отзывы -->
@@ -191,18 +193,30 @@
 		<!-- Раздел оставить заявку -->
 
 		<section class="form" id="form">
-			<div class="container">
+			<div class="form-section">
 				<h3>Оставить заявку</h3>
+				<p>Оставьте свои контакты. Менеджер перезвонит
+					в удобное вам время и ответит на все вопросы.</p>
+				<form action="#" method="post">
+					<input type="text" name="name" placeholder="Ваше имя" required>
 
+					<input type="tel" name="telephone" placeholder="Введите телефон" pattern="[0-9]{10}" required>
+
+					<button class="form-button" type="submit">Оставить заявку</button>
+				</form>
 			</div>
 			<div class="map">
-				<img src="" alt="Карта с адресом нашей компании">
+				<img src="/img/map.jpg" alt="Карта с адресом нашей компании">
 			</div>
 		</section>
 
 	</main>
 
-	<footer>1</footer>
+	<footer>
+		<div>+7 (981) 857-46-24</div>
+		<div>г. Санкт-петербург, ул. Большая Конюшенная, 19</div>
+		<div>ИП Королёва А.А.</div>
+	</footer>
 
 </body>
 
